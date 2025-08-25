@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کلینیک زیبایی Clinic 7 - لوکس و مینیمال</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700&family=Shabnam:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --luxury-black: #000000;
+            --luxury-gold: #FFD700;
+            --pure-white: #FFFFFF;
+            --dark-gray: #1C1C1C;
+        }
+        
+        * {
+            font-family: 'Vazirmatn', 'Shabnam', 'Tahoma', sans-serif;
+            direction: rtl;
+            text-align: right;
+        }
+        
+        body {
+            direction: rtl;
+            text-align: right;
+        }
+        
+        .luxury-title {
+            font-family: 'Vazirmatn', 'Shabnam', serif;
+            font-weight: 700;
+        }
+        
+        .luxury-accent {
+            font-family: 'Vazirmatn', 'Shabnam', sans-serif;
+            font-weight: 500;
+        }
+        
+        .persian-text {
+            font-family: 'Vazirmatn', 'Shabnam', 'Tahoma', sans-serif;
+            direction: rtl;
+            text-align: right;
+            line-height: 1.8;
+        }
+        
+        .english-text {
+            font-family: 'Montserrat', sans-serif;
+            direction: ltr;
+            text-align: center;
+        }
+        
+        .gold-gradient {
+            background: linear-gradient(135deg, #FFD700, #FFA500, #FFD700);
+        }
+        
+        .gold-text {
+            color: #FFD700;
+        }
+        
+        .gold-shadow {
+            box-shadow: 0 8px 32px rgba(255, 215, 0, 0.3);
+        }
+        
+        .luxury-card {
+            background: rgba(28, 28, 28, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.1);
+        }
+        
+        .hover-gold:hover {
+            background: linear-gradient(135deg, #FFA500, #FFD700);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(255, 215, 0, 0.4);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .luxury-border {
+            border: 1px solid #1C1C1C;
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .accordion-content.active {
+            max-height: 300px;
+        }
+        
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 12px;
+        }
+        
+        .calendar-day {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #1C1C1C;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #FFFFFF;
+            font-weight: 500;
+        }
+        
+        .calendar-day:hover {
+            background: rgba(255, 215, 0, 0.1);
+            border-color: #FFD700;
+            transform: scale(1.05);
+        }
+        
+        .calendar-day.selected {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #000000;
+            font-weight: 700;
+            box-shadow: 0 4px 20px rgba(255, 215, 0, 0.5);
+        }
+        
+        .luxury-input {
+            background: #1C1C1C;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            color: #FFFFFF;
+            transition: all 0.3s ease;
+        }
+        
+        .luxury-input:focus {
+            border-color: #FFD700;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+            outline: none;
+        }
+        
+        .luxury-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #1C1C1C, transparent);
+            margin: 4rem 0;
+        }
+    </style>
+</head>
+<body style="background-color: #000000; color: #FFFFFF;" class="min-h-screen">
+    <!-- Header -->
+    <header class="relative overflow-hidden py-20">
+        <div class="absolute inset-0 bg-gradient-to-br from-transparent via-gray-900/10 to-transparent"></div>
+        <div class="relative container mx-auto px-6 text-center">
+            <h1 class="luxury-title english-text text-7xl font-bold mb-6" style="color: #FFD700;">Clinic 7</h1>
+            <div class="w-24 h-1 gold-gradient mx-auto mb-6"></div>
+            <p class="luxury-accent persian-text text-2xl mb-8 text-center" style="color: #FFFFFF;">زیبایی بی‌نهایت، تجربه‌ای لوکس</p>
+            
+            <!-- Additional Persian Content -->
+            <div style="
+              direction: rtl;
+              text-align: right;
+              font-family: Tahoma, sans-serif;
+              line-height: 1.8;
+              max-width: 600px;
+              margin: 2rem auto;
+              padding: 2rem;
+              background: rgba(28, 28, 28, 0.6);
+              border-radius: 16px;
+              border: 1px solid rgba(255, 215, 0, 0.2);
+            ">
+              <h2 style="writing-mode: horizontal-tb; white-space: nowrap; color: gold; text-align: center; margin-bottom: 1rem; font-size: 2rem;">
+                کلینیک زیبایی سون
+              </h2>
+              <p style="writing-mode: horizontal-tb; white-space: normal; font-size: 16px; color: #ffffff; text-align: center;">
+                ارائه‌دهنده خدمات زیبایی، تزریقات و جوانسازی با بهترین کیفیت و جدیدترین متدهای روز.
+              </p>
+            </div>
+            <div class="flex justify-center space-x-8 space-x-reverse">
+                <span class="text-5xl" style="color: #FFD700;">✨</span>
+                <span class="text-5xl" style="color: #FFD700;">💉</span>
+                <span class="text-5xl" style="color: #FFD700;">👨‍⚕️</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="section-divider"></div>
+
+    <!-- About Us -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="luxury-title persian-text text-5xl font-bold text-center mb-4" style="color: #FFD700;">درباره کلینیک</h2>
+            <div class="w-16 h-1 gold-gradient mx-auto mb-12"></div>
+            <div class="max-w-4xl mx-auto text-center">
+                <p class="persian-text text-xl leading-relaxed" style="color: #FFFFFF;">
+                    در کلینیک زیبایی Clinic 7، ما تجربه‌ای لوکس و بی‌نظیر از خدمات زیبایی ارائه می‌دهیم. 
+                    با بهره‌گیری از پیشرفته‌ترین تکنولوژی‌ها و متخصصان برتر، زیبایی شما را به سطحی جدید می‌رسانیم.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Services -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="luxury-title persian-text text-5xl font-bold text-center mb-4" style="color: #FFD700;">خدمات لوکس</h2>
+            <div class="w-16 h-1 gold-gradient mx-auto mb-16"></div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="luxury-card p-8 rounded-2xl hover:scale-105 transition-all duration-500">
+                    <div class="text-5xl mb-6 text-center" style="color: #FFD700;">💉</div>
+                    <h3 class="luxury-accent persian-text text-2xl font-semibold mb-4 text-center" style="color: #FFD700;">بوتاکس پریمیوم</h3>
+                    <p class="persian-text text-center" style="color: #FFFFFF;">جوانسازی طبیعی با بالاترین کیفیت</p>
+                </div>
+                
+                <div class="luxury-card p-8 rounded-2xl hover:scale-105 transition-all duration-500">
+                    <div class="text-5xl mb-6 text-center" style="color: #FFD700;">💋</div>
+                    <h3 class="luxury-accent persian-text text-2xl font-semibold mb-4 text-center" style="color: #FFD700;">فیلر لوکس</h3>
+                    <p class="persian-text text-center" style="color: #FFFFFF;">حجم‌دهی هنرمندانه لب و صورت</p>
+                </div>
+                
+                <div class="luxury-card p-8 rounded-2xl hover:scale-105 transition-all duration-500">
+                    <div class="text-5xl mb-6 text-center" style="color: #FFD700;">✨</div>
+                    <h3 class="luxury-accent persian-text text-2xl font-semibold mb-4 text-center" style="color: #FFD700;">تزریق چربی</h3>
+                    <p class="persian-text text-center" style="color: #FFFFFF;">جوانسازی طبیعی با تکنولوژی پیشرفته</p>
+                </div>
+                
+                <div class="luxury-card p-8 rounded-2xl hover:scale-105 transition-all duration-500">
+                    <div class="text-5xl mb-6 text-center" style="color: #FFD700;">🛏️</div>
+                    <h3 class="luxury-accent persian-text text-2xl font-semibold mb-4 text-center" style="color: #FFD700;">مزوتراپی VIP</h3>
+                    <p class="persian-text text-center" style="color: #FFFFFF;">تقویت و درخشندگی پوست</p>
+                </div>
+                
+                <div class="luxury-card p-8 rounded-2xl hover:scale-105 transition-all duration-500">
+                    <div class="text-5xl mb-6 text-center" style="color: #FFD700;">🔥</div>
+                    <h3 class="luxury-accent persian-text text-2xl font-semibold mb-4 text-center" style="color: #FFD700;">لیزر پیشرفته</h3>
+                    <p class="persian-text text-center" style="color: #FFFFFF;">حذف موهای زائد با دستگاه‌های لوکس</p>
+                </div>
+                
+                <div class="luxury-card p-8 rounded-2xl hover:scale-105 transition-all duration-500">
+                    <div class="text-5xl mb-6 text-center" style="color: #FFD700;">👨‍⚕️</div>
+                    <h3 class="luxury-accent persian-text text-2xl font-semibold mb-4 text-center" style="color: #FFD700;">مشاوره تخصصی</h3>
+                    <p class="persian-text text-center" style="color: #FFFFFF;">مشاوره رایگان با متخصصان برتر</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Accordion Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="luxury-card rounded-2xl overflow-hidden">
+                    <button class="accordion-btn w-full p-8 text-right flex justify-between items-center hover:bg-gray-900/50 transition-all duration-300" onclick="toggleAccordion()">
+                        <span class="luxury-accent persian-text text-2xl font-semibold flex items-center" style="color: #FFD700;">
+                            <span class="ml-4 text-4xl">💉</span>
+                            خدمات ویژه کلینیک
+                        </span>
+                        <span class="accordion-icon text-3xl transition-transform duration-500" style="color: #FFD700;">⊕</span>
+                    </button>
+                    <div class="accordion-content" style="background-color: #1C1C1C;">
+                        <div class="p-8 space-y-6">
+                            <div class="flex items-center" style="color: #FFFFFF;">
+                                <span class="ml-4 text-2xl" style="color: #FFD700;">•</span>
+                                <span class="persian-text text-lg">بوتاکس پریمیوم – رفع چین و چروک با دوام بالا</span>
+                            </div>
+                            <div class="flex items-center" style="color: #FFFFFF;">
+                                <span class="ml-4 text-2xl" style="color: #FFD700;">•</span>
+                                <span class="persian-text text-lg">فیلر لوکس – طراحی هنرمندانه چهره</span>
+                            </div>
+                            <div class="flex items-center" style="color: #FFFFFF;">
+                                <span class="ml-4 text-2xl" style="color: #FFD700;">•</span>
+                                <span class="persian-text text-lg">تزریق چربی – جوانسازی کاملاً طبیعی</span>
+                            </div>
+                            <div class="flex items-center" style="color: #FFFFFF;">
+                                <span class="ml-4 text-2xl" style="color: #FFD700;">•</span>
+                                <span class="persian-text text-lg">مزوتراپی VIP – تقویت عمقی پوست و مو</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+<!-- Appointment Booking Section -->
+<section id="appointment" class="appointment">
+  <h2>رزرو نوبت</h2>
+  <div class="steps">
+    <!-- Step 1: انتخاب سرویس -->
+    <div class="step active" id="step1">
+      <h3>انتخاب خدمت</h3>
+      <div class="services">
+        <button class="service-btn">
+          <i class="fas fa-syringe"></i> بوتاکس
+        </button>
+        <button class="service-btn">
+          <i class="fas fa-spa"></i> فیبر لوکس
+        </button>
+        <button class="service-btn">
+          <i class="fas fa-user-md"></i> مشاوره تخصصی
+        </button>
+        <button class="service-btn">
+          <i class="fas fa-lightbulb"></i> لیزر پیشرفته
+        </button>
+      </div>
+    </div>
+
+    <!-- Step 2: انتخاب دکتر -->
+    <div class="step" id="step2">
+      <h3>انتخاب دکتر</h3>
+      <div class="doctors">
+        <button class="doctor-btn">دکتر الف</button>
+        <button class="doctor-btn">دکتر ب</button>
+      </div>
+    </div>
+
+    <!-- Step 3: انتخاب تاریخ شمسی -->
+    <div class="step" id="step3">
+      <h3>انتخاب تاریخ</h3>
+      <div id="calendar" class="calendar"></div>
+    </div>
+
+    <!-- Step 4: اطلاعات کاربر -->
+    <div class="step" id="step4">
+      <h3>اطلاعات شما</h3>
+      <form>
+        <input type="text" placeholder="نام و نام خانوادگی" required>
+        <input type="tel" placeholder="شماره تماس" required>
+        <input type="email" placeholder="ایمیل" required>
+        <button type="submit">تأیید نهایی</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- استایل -->
+<style>
+  .services, .doctors { display: flex; flex-wrap: wrap; gap: 10px; }
+  .service-btn, .doctor-btn {
+    background: #222;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+  }
+  .service-btn i {
+    font-size: 18px;
+    transition: all 0.3s ease;
+  }
+  .service-btn:hover i {
+    color: gold;
+    transform: scale(1.3);
+  }
+
+  .calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    margin-top: 15px;
+  }
+  .calendar div {
+    padding: 10px;
+    text-align: center;
+    background: #333;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .calendar div:hover {
+    background: gold;
+    color: black;
+    transform: scale(1.1);
+  }
+</style>
+
+<!-- کتابخانه شمسی -->
+<script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment-jalaali@0.9.6/build/moment-jalaali.js"></script>
+
+<!-- اسکریپت مراحل و تقویم -->
+<script>
+  let currentStep = 1;
+  const steps = document.querySelectorAll(".step");
+
+  function goToStep(step) {
+    steps.forEach(s => s.classList.remove("active"));
+    document.getElementById("step" + step).classList.add("active");
+    currentStep = step;
+  }
+
+  document.querySelectorAll(".service-btn").forEach(btn => {
+    btn.addEventListener("click", () => goToStep(2));
+  });
+
+  document.querySelectorAll(".doctor-btn").forEach(btn => {
+    btn.addEventListener("click", () => goToStep(3));
+  });
+
+  // ساخت تقویم شمسی
+  function generateCalendar() {
+    moment.loadPersian({ dialect: 'persian-modern' });
+    const calendarEl = document.getElementById("calendar");
+    calendarEl.innerHTML = "";
+
+    const today = moment();
+    const startOfMonth = today.clone().startOf("jMonth");
+    const endOfMonth = today.clone().endOf("jMonth");
+    let day = startOfMonth.clone();
+
+    while (day <= endOfMonth) {
+      const dayEl = document.createElement("div");
+      dayEl.textContent = day.jDate();
+      dayEl.dataset.date = day.format("jYYYY/jMM/jDD");
+
+      dayEl.addEventListener("click", () => {
+        alert("تاریخ انتخابی شما: " + dayEl.dataset.date);
+        goToStep(4);
+      });
+
+      calendarEl.appendChild(dayEl);
+      day.add(1, "day");
+    }
+  }
+
+  generateCalendar();
+</script>
